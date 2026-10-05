@@ -14,7 +14,7 @@ function Chat() {
   const [message, setMessage] = useState("");
   const [chat, setChat] = useState([]);
   const [receiver, setReceiver] = useState({});
-  const socket = io("http://localhost:3015/");
+  const socket = io("https://route66-backend-1-v5us.onrender.com/");
 
   const [showDeleteMenu, setShowDeleteMenu] = useState(false);
   const [selectedMessage, setSelectedMessage] = useState(null);
