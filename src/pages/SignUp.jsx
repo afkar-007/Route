@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/Signup.css";
+import '../styles/SignUp.css'
 import logo from "../images/logo.svg";
 
 function SignUp() {
