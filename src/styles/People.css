@@ -1,0 +1,815 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap");
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.route66-people {
+    min-height: calc(100vh - 98px);
+    padding: 55px 6%;
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(212, 175, 55, 0.07),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 5% 80%,
+            rgba(212, 175, 55, 0.035),
+            transparent 25%
+        ),
+        #080808;
+
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+.route66-people *,
+.route66-people *::before,
+.route66-people *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.people-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.people-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 18px;
+    padding: 8px 13px;
+
+    border: 1px solid rgba(212, 175, 55, 0.17);
+    border-radius: 30px;
+
+    background: rgba(212, 175, 55, 0.045);
+
+    color: #9c906c;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+.people-eyebrow i {
+    color: #d4af37;
+    font-size: 9px;
+
+    text-shadow:
+        0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.people-header h1 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 0.98;
+
+    font-weight: 800;
+    letter-spacing: -3px;
+
+    color: #eeeae1;
+}
+
+.people-header h1 span {
+    color: #d4af37;
+
+    text-shadow:
+        0 0 35px rgba(212, 175, 55, 0.12);
+}
+
+
+.people-header p {
+    margin: 17px 0 0;
+
+    color: #66635e;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PEOPLE COUNT
+========================================================= */
+
+.people-count {
+    min-width: 90px;
+
+    padding: 14px 18px;
+
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.02);
+
+    text-align: center;
+}
+
+.people-count strong {
+    display: block;
+
+    color: #d4af37;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.people-count span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #555;
+
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SEARCH SECTION
+========================================================= */
+
+.people-search-section {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 42px auto 0;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.people-search {
+    width: 100%;
+    max-width: 550px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(28, 28, 28, 0.9),
+            rgba(14, 14, 14, 0.9)
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.people-search:focus-within {
+    border-color: rgba(212, 175, 55, 0.35);
+
+    box-shadow:
+        0 0 0 3px rgba(212, 175, 55, 0.035);
+}
+
+.people-search > i {
+    margin-right: 11px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    transition: color 0.25s ease;
+}
+
+.people-search:focus-within > i {
+    color: #d4af37;
+}
+
+
+.people-search input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ddd;
+
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+}
+
+.people-search input::placeholder {
+    color: #505050;
+}
+
+
+.people-search-clear {
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #666;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.people-search-clear:hover {
+    background: rgba(212, 175, 55, 0.08);
+    color: #d4af37;
+}
+
+.people-search-clear i {
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   PEOPLE LIST
+========================================================= */
+
+.people-list {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 25px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   PERSON CARD
+========================================================= */
+
+.person-card {
+    min-width: 0;
+
+    min-height: 92px;
+
+    padding: 14px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.055);
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(28, 28, 28, 0.88),
+            rgba(13, 13, 13, 0.94)
+        );
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.person-card:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(212, 175, 55, 0.16);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(32, 32, 32, 0.95),
+            rgba(15, 15, 15, 0.98)
+        );
+}
+
+
+/* =========================================================
+   PERSON MAIN
+========================================================= */
+
+.person-main {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.person-avatar {
+    position: relative;
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e5dfd2,
+            #9b9486
+        );
+
+    color: #111;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   ONLINE INDICATOR
+========================================================= */
+
+.person-avatar > span {
+    position: absolute;
+
+    right: -2px;
+    bottom: -2px;
+
+    width: 11px;
+    height: 11px;
+
+    border: 2px solid #161616;
+
+    border-radius: 50%;
+}
+
+.person-online {
+    background: #d4af37;
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.7);
+}
+
+.person-offline {
+    background: #444;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.person-details {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.person-details h3 {
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #dcd8d0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.person-details > span {
+    margin-top: 4px;
+
+    overflow: hidden;
+
+    color: #555;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.person-details small {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin-top: 5px;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.person-details small i {
+    font-size: 5px;
+}
+
+.person-status-online {
+    color: #a99967;
+}
+
+.person-status-online i {
+    color: #d4af37;
+}
+
+.person-status-offline {
+    color: #4e4e4e;
+}
+
+.person-status-offline i {
+    color: #444;
+}
+
+
+/* =========================================================
+   CHAT BUTTON
+========================================================= */
+
+.person-chat-button {
+    height: 36px;
+
+    flex-shrink: 0;
+
+    padding: 0 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 1px solid rgba(212, 175, 55, 0.16);
+    border-radius: 9px;
+
+    background: rgba(212, 175, 55, 0.055);
+
+    color: #c0a75d;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.person-chat-button:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+
+    background: #d4af37;
+
+    color: #111;
+
+    transform: translateY(-1px);
+}
+
+.person-chat-button i {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.people-empty {
+    grid-column: 1 / -1;
+
+    min-height: 260px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, 0.015);
+
+    text-align: center;
+}
+
+.people-empty-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(212, 175, 55, 0.13);
+    border-radius: 14px;
+
+    background: rgba(212, 175, 55, 0.045);
+
+    color: #8d773c;
+}
+
+.people-empty-icon i {
+    font-size: 20px;
+}
+
+.people-empty h3 {
+    margin: 16px 0 0;
+
+    color: #aaa59c;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+}
+
+.people-empty p {
+    margin: 7px 0 0;
+
+    color: #505050;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .route66-people {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .people-list {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   800px — TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .route66-people {
+        min-height: calc(100vh - 80px);
+
+        padding: 40px 25px;
+    }
+
+    .people-header {
+        align-items: center;
+    }
+
+    .people-header h1 {
+        font-size: 48px;
+    }
+
+    .people-search-section {
+        margin-top: 32px;
+    }
+
+    .people-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .route66-people {
+        padding: 32px 18px 40px;
+    }
+
+    .people-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .people-header h1 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .people-header p {
+        max-width: 280px;
+        font-size: 11px;
+    }
+
+    .people-count {
+        min-width: 70px;
+        padding: 10px 12px;
+    }
+
+    .people-count strong {
+        font-size: 18px;
+    }
+
+    .people-search {
+        height: 48px;
+    }
+
+    .person-card {
+        padding: 12px;
+    }
+}
+
+
+/* =========================================================
+   450px
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .route66-people {
+        padding: 25px 12px 35px;
+    }
+
+    .people-eyebrow {
+        font-size: 7px;
+        letter-spacing: 1.2px;
+    }
+
+    .people-header h1 {
+        font-size: 35px;
+    }
+
+    .people-header p {
+        font-size: 10px;
+    }
+
+    .people-count {
+        min-width: 58px;
+        padding: 8px 9px;
+    }
+
+    .people-count strong {
+        font-size: 16px;
+    }
+
+    .people-count span {
+        font-size: 7px;
+    }
+
+    .person-card {
+        min-height: 80px;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .person-main {
+        gap: 9px;
+    }
+
+    .person-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 11px;
+        font-size: 9px;
+    }
+
+    .person-details h3 {
+        font-size: 10px;
+    }
+
+    .person-details > span {
+        font-size: 8px;
+    }
+
+    .person-details small {
+        font-size: 7px;
+    }
+
+    .person-chat-button {
+        height: 33px;
+        padding: 0 9px;
+        gap: 5px;
+    }
+
+    .person-chat-button span {
+        display: none;
+    }
+
+    .person-chat-button i {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   350px
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .route66-people {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .people-header h1 {
+        font-size: 31px;
+    }
+
+    .people-count {
+        display: none;
+    }
+
+    .person-avatar {
+        width: 39px;
+        height: 39px;
+    }
+
+    .person-details h3 {
+        font-size: 9px;
+    }
+}

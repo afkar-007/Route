@@ -1,0 +1,598 @@
+/* ================================
+   ROUTE66 CHATS PAGE
+================================ */
+
+.route66-chats-page {
+    width: 100%;
+    min-height: calc(100vh - 76px);
+    padding: 35px 20px 50px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(212, 175, 55, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(212, 175, 55, 0.05),
+            transparent 30%
+        ),
+        #080808;
+
+    color: #ffffff;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.chats-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    background: rgba(18, 18, 18, 0.9);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 22px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.chats-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+.chats-header h1 {
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #ffffff;
+    
+}
+
+.chats-header p {
+    margin: 6px 0 0;
+
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* ================================
+   NEW CHAT BUTTON
+================================ */
+
+.new-chat-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #d4af37,
+        #a98220
+    );
+
+    color: #080808;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.new-chat-button i {
+    font-size: 15px;
+}
+
+.new-chat-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(212, 175, 55, 0.25);
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.chats-search {
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 16px;
+
+    margin-bottom: 22px;
+
+    background: #111111;
+
+    border: 1px solid #252525;
+    border-radius: 13px;
+
+    transition: 0.25s ease;
+}
+
+.chats-search:focus-within {
+    border-color: rgba(212, 175, 55, 0.55);
+
+    box-shadow:
+        0 0 0 3px rgba(212, 175, 55, 0.06);
+}
+
+.chats-search i {
+    color: #777;
+    font-size: 17px;
+}
+
+.chats-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+.chats-search input::placeholder {
+    color: #666;
+}
+
+
+/* ================================
+   CHAT LIST
+================================ */
+
+.chat-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* ================================
+   CHAT ITEM
+================================ */
+
+.chat-list-item {
+    width: 85%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.chat-list-item:hover {
+    background: rgba(212, 175, 55, 0.055);
+
+    border-color: rgba(212, 175, 55, 0.18);
+
+    transform: translateX(3px);
+}
+
+
+/* ================================
+   AVATAR
+================================ */
+
+.chat-list-avatar {
+    position: relative;
+
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4af37,
+            #8e6d1d
+        );
+
+    color: #080808;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 20px rgba(212, 175, 55, 0.12);
+}
+
+
+/* ================================
+   ONLINE DOT
+================================ */
+
+.chat-online {
+    position: absolute;
+
+    width: 11px;
+    height: 11px;
+
+    right: 1px;
+    bottom: 1px;
+
+    border-radius: 50%;
+
+    background: #31d158;
+
+    border: 2px solid #111111;
+}
+
+
+/* ================================
+   CHAT INFO
+================================ */
+
+.chat-list-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.chat-list-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.chat-list-top h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-list-top span {
+    flex-shrink: 0;
+
+    color: #666;
+
+    font-size: 11px;
+}
+
+
+/* ================================
+   LAST MESSAGE
+================================ */
+
+.chat-list-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 6px;
+}
+
+.chat-list-bottom p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ================================
+   UNREAD COUNT
+================================ */
+
+.chat-unread {
+    min-width: 21px;
+    height: 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 6px;
+
+    border-radius: 50%;
+
+    background: #d4af37;
+    color: #080808;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   LOADING / EMPTY
+================================ */
+
+.chat-status {
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.chat-status > i {
+    font-size: 28px;
+
+    color: #d4af37;
+
+    animation: chatRotate 1s linear infinite;
+}
+
+.chat-status p {
+    margin-top: 12px;
+
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ================================
+   EMPTY ICON
+================================ */
+
+.chat-empty-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 20px;
+
+    background: rgba(212, 175, 55, 0.08);
+
+    border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.chat-empty-icon i {
+    color: #d4af37;
+    font-size: 30px;
+}
+
+.chat-status h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.chat-status button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 18px;
+
+    padding: 10px 18px;
+
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #d4af37;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.chat-status button:hover {
+    background: #d4af37;
+    color: #080808;
+}
+
+
+/* ================================
+   LOADING ANIMATION
+================================ */
+
+@keyframes chatRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 768px) {
+
+    .route66-chats-page {
+        padding: 25px 15px 40px;
+    }
+
+    .chats-container {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .chats-header h1 {
+        font-size: 27px;
+    }
+
+    .new-chat-button {
+        padding: 10px 13px;
+    }
+
+    .new-chat-button span {
+        display: none;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 500px) {
+
+    .route66-chats-page {
+        padding: 15px 10px 90px;
+    }
+
+    .chats-container {
+        padding: 17px 12px;
+
+        border-radius: 16px;
+
+        border-left: none;
+        border-right: none;
+    }
+
+    .chats-header {
+        margin-bottom: 20px;
+    }
+
+    .chats-header h1 {
+        font-size: 24px;
+    }
+
+    .chats-header p {
+        font-size: 12px;
+    }
+
+    .new-chat-button {
+        width: 40px;
+        height: 40px;
+
+        padding: 0;
+
+        justify-content: center;
+        border-radius: 11px;
+    }
+
+    .new-chat-button i {
+        font-size: 16px;
+    }
+
+    .chats-search {
+        height: 44px;
+
+        margin-bottom: 15px;
+    }
+
+    .chat-list-item {
+        gap: 12px;
+
+        padding: 12px 10px;
+
+        border-radius: 13px;
+    }
+
+    .chat-list-avatar {
+        width: 46px;
+        height: 46px;
+
+        font-size: 18px;
+    }
+
+    .chat-online {
+        width: 10px;
+        height: 10px;
+    }
+
+    .chat-list-top h3 {
+        font-size: 14px;
+    }
+
+    .chat-list-top span {
+        font-size: 10px;
+    }
+
+    .chat-list-bottom p {
+        font-size: 12px;
+    }
+
+    .chat-status {
+        min-height: 240px;
+    }
+
+    .chat-status h2 {
+        font-size: 18px;
+    }
+}

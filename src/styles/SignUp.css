@@ -1,0 +1,710 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+
+/* ================================
+   SIGNUP PAGE ONLY
+================================ */
+
+.route66-signup-page {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(212, 175, 55, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(212, 175, 55, 0.08),
+            transparent 30%
+        ),
+        #050505;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+}
+
+
+/* ================================
+   AMBIENT LIGHT
+================================ */
+
+.signup-ambient {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+.signup-ambient-one {
+    width: 450px;
+    height: 450px;
+
+    top: -200px;
+    left: -150px;
+
+    background: rgba(212, 175, 55, 0.10);
+}
+
+.signup-ambient-two {
+    width: 400px;
+    height: 400px;
+
+    right: -150px;
+    bottom: -150px;
+
+    background: rgba(212, 175, 55, 0.08);
+}
+
+
+/* ================================
+   BACKGROUND GRID
+================================ */
+
+.signup-background-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.signup-container {
+    width: min(1200px, 92%);
+    min-height: 680px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    position: relative;
+    z-index: 2;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    backdrop-filter: blur(25px);
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.7),
+        inset 0 1px rgba(255, 255, 255, 0.05);
+}
+
+
+/* ================================
+   LEFT VISUAL
+================================ */
+
+.signup-visual {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(212, 175, 55, 0.07),
+            transparent 50%
+        );
+
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+
+    overflow: hidden;
+}
+
+
+.signup-visual-content {
+    position: relative;
+    z-index: 3;
+}
+
+
+.signup-eyebrow {
+    display: inline-block;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #b9b9b9;
+
+    margin-bottom: 25px;
+}
+
+
+.signup-visual h1 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(70px, 8vw, 125px);
+
+    line-height: 0.85;
+
+    font-weight: 900;
+
+    letter-spacing: -8px;
+
+    color: #ffffff;
+}
+
+
+.signup-visual h1 span {
+    color: #d4af37;
+
+    text-shadow:
+        0 0 30px rgba(212, 175, 55, 0.25);
+}
+
+
+.signup-gold-divider {
+    width: 100px;
+    height: 2px;
+
+    margin: 35px 0;
+
+    background: #d4af37;
+
+    box-shadow:
+        0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+
+.signup-visual-content p {
+    margin: 0;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+
+    color: #bdbdbd;
+}
+
+
+.signup-route-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 45px;
+
+    padding: 10px 16px;
+
+    border: 1px solid rgba(212, 175, 55, 0.25);
+
+    border-radius: 50px;
+
+    background: rgba(212, 175, 55, 0.05);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #d4af37;
+}
+
+
+.signup-status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #d4af37;
+
+    box-shadow:
+        0 0 12px #d4af37;
+
+    animation: signupPulse 2s infinite;
+}
+
+
+/* ================================
+   ROAD DECORATION
+================================ */
+
+.signup-road-line {
+    position: absolute;
+
+    width: 1px;
+    height: 150%;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(212, 175, 55, 0.5),
+            transparent
+        );
+
+    transform: rotate(25deg);
+
+    opacity: 0.4;
+}
+
+
+.signup-road-line-one {
+    right: 100px;
+    top: -100px;
+}
+
+
+.signup-road-line-two {
+    right: 180px;
+    top: -100px;
+
+    opacity: 0.15;
+}
+
+
+/* ================================
+   RIGHT SECTION
+================================ */
+
+.signup-welcome-section {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px;
+}
+
+
+.signup-welcome-card {
+    width: 100%;
+    max-width: 440px;
+}
+
+
+/* ================================
+   LABEL
+================================ */
+
+.signup-card-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #8d8d8d;
+}
+
+
+.signup-card-label span {
+    width: 25px;
+    height: 1px;
+
+    background: #d4af37;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.signup-brand-logo {
+    width: 100px;
+    height: 100px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 35px;
+}
+
+
+.signup-brand-logo img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.signup-logo-ring {
+    position: absolute;
+
+    inset: 0;
+
+    border: 1px solid rgba(212, 175, 55, 0.4);
+
+    border-radius: 50%;
+
+    border-top-color: #d4af37;
+
+    animation: signupRotateRing 8s linear infinite;
+}
+
+
+.signup-logo-ring::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    right: 10px;
+    top: 12px;
+
+    background: #d4af37;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 15px #d4af37;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.signup-welcome-card h2 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 58px;
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    font-weight: 800;
+}
+
+
+.signup-welcome-card h2 span {
+    color: #d4af37;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.signup-description {
+    max-width: 380px;
+
+    margin: 25px 0 35px;
+
+    color: #898989;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.signup-login-button {
+    width: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 22px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    background: #d4af37;
+
+    color: #050505;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 10px 30px rgba(212, 175, 55, 0.15);
+       
+}
+
+
+.signup-login-button i {
+    font-size: 18px;
+
+    transition: 0.3s ease;
+}
+
+
+.signup-login-button:hover {
+    background: #e5c45a;
+
+    color: #050505;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(212, 175, 55, 0.25);
+}
+
+
+.signup-login-button:hover i {
+    transform: translate(4px, -4px);
+}
+
+
+/* ================================
+   BOTTOM INFO
+================================ */
+
+.signup-bottom-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 25px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #666;
+}
+
+
+.signup-info-dot {
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: #d4af37;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.signup-footer {
+    position: absolute;
+
+    bottom: 18px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #555;
+
+    white-space: nowrap;
+}
+
+
+.signup-footer span {
+    color: #d4af37;
+
+    margin: 0 8px;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes signupPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+}
+
+
+@keyframes signupRotateRing {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .signup-container {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        max-width: 650px;
+    }
+
+    .signup-visual {
+        min-height: 330px;
+
+        padding: 50px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .signup-visual h1 {
+        font-size: 85px;
+    }
+
+    .signup-welcome-section {
+        padding: 50px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .route66-signup-page {
+        padding: 25px 0;
+
+        overflow-y: auto;
+    }
+
+    .signup-container {
+        width: 92%;
+
+        border-radius: 22px;
+    }
+
+    .signup-visual {
+        min-height: 250px;
+
+        padding: 35px;
+    }
+
+    .signup-eyebrow {
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+    .signup-visual h1 {
+        font-size: 58px;
+
+        letter-spacing: -5px;
+    }
+
+    .signup-visual-content p {
+        font-size: 15px;
+    }
+
+    .signup-route-badge {
+        margin-top: 25px;
+
+        font-size: 8px;
+    }
+
+    .signup-welcome-section {
+        padding: 35px 25px;
+    }
+
+    .signup-welcome-card h2 {
+        font-size: 45px;
+    }
+
+    .signup-brand-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .signup-brand-logo img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .signup-footer {
+        display: none;
+    }
+}

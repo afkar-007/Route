@@ -1,0 +1,686 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap");
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.route66-home {
+    min-height: calc(100vh - 98px);
+    padding: 50px 6%;
+    background:
+        radial-gradient(circle at 80% 30%, rgba(212, 175, 55, 0.07), transparent 30%),
+        radial-gradient(circle at 10% 80%, rgba(212, 175, 55, 0.04), transparent 25%),
+        #080808;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+}
+
+.route66-home *,
+.route66-home *::before,
+.route66-home *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.home-hero {
+    width: 100%;
+    max-width: 1350px;
+    min-height: 590px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.home-hero-content {
+    max-width: 620px;
+}
+
+.home-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 25px;
+    padding: 8px 13px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: 30px;
+    background: rgba(212, 175, 55, 0.05);
+    color: #a99b72;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.home-eyebrow i {
+    font-size: 6px;
+    color: #d4af37;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+}
+
+
+.home-hero h1 {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(55px, 7vw, 105px);
+    line-height: 0.91;
+    font-weight: 800;
+    letter-spacing: -5px;
+    color: #eeeeea;
+}
+
+.home-hero h1 span {
+    color: #d4af37;
+    text-shadow: 0 0 35px rgba(212, 175, 55, 0.12);
+}
+
+
+.home-hero-content > p {
+    margin: 30px 0 0;
+    color: #77736d;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.home-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.home-primary-button,
+.home-secondary-button {
+    height: 48px;
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.home-primary-button {
+    border: 1px solid #d4af37;
+    background: linear-gradient(135deg, #e2c86d, #b88f38);
+    color: #101010;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.12);
+}
+
+.home-primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.22);
+}
+
+.home-secondary-button {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.025);
+    color: #aaa;
+}
+
+.home-secondary-button:hover {
+    border-color: rgba(212, 175, 55, 0.25);
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.04);
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.home-visual {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-glow {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.08);
+    filter: blur(80px);
+}
+
+
+/* =========================================================
+   CHAT CARD
+========================================================= */
+
+.home-chat-card {
+    position: relative;
+    z-index: 2;
+    width: min(430px, 100%);
+    min-height: 400px;
+    padding: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.14);
+    border-radius: 22px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(31, 31, 31, 0.97),
+            rgba(12, 12, 12, 0.98)
+        );
+    box-shadow:
+        0 35px 80px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.home-card-header {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.home-card-user {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.home-user-avatar {
+    position: relative;
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: linear-gradient(145deg, #e8dfcc, #9e9583);
+    color: #111;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.home-user-avatar span {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    width: 9px;
+    height: 9px;
+    border: 2px solid #171717;
+    border-radius: 50%;
+    background: #d4af37;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
+}
+
+.home-card-user strong {
+    display: block;
+    color: #ddd8cf;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.home-card-user small {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 4px;
+    color: #666;
+    font-size: 9px;
+}
+
+.home-card-user small i {
+    color: #d4af37;
+    font-size: 5px;
+}
+
+.home-card-header > i {
+    color: #555;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.home-messages {
+    min-height: 270px;
+    padding: 25px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.home-message {
+    max-width: 70%;
+    padding: 11px 14px;
+    border-radius: 13px;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.home-message.received {
+    align-self: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom-left-radius: 4px;
+    background: rgba(255, 255, 255, 0.045);
+    color: #999;
+}
+
+.home-message.sent {
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+    background: linear-gradient(135deg, #d9bb5b, #ad8533);
+    color: #101010;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CHAT INPUT
+========================================================= */
+
+.home-chat-input {
+    height: 48px;
+    padding: 0 8px 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.home-chat-input span {
+    color: #555;
+    font-size: 9px;
+}
+
+.home-chat-input button {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 9px;
+    background: #d4af37;
+    color: #111;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.home-chat-input button:hover {
+    transform: scale(1.05);
+}
+
+.home-chat-input button i {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FLOATING CARD
+========================================================= */
+
+.home-floating-card {
+    position: absolute;
+    right: -10px;
+    bottom: 35px;
+    z-index: 3;
+    min-width: 155px;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.13);
+    border-radius: 13px;
+    background: rgba(19, 19, 19, 0.94);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+.home-floating-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: rgba(212, 175, 55, 0.08);
+    color: #d4af37;
+}
+
+.home-floating-icon i {
+    font-size: 14px;
+}
+
+.home-floating-card strong {
+    display: block;
+    color: #e5dfd2;
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+}
+
+.home-floating-card span {
+    display: block;
+    margin-top: 2px;
+    color: #555;
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.home-stats {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto 0;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.015);
+    cursor: pointer;
+}
+
+.home-stat {
+    min-height: 65px;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-radius: 11px;
+    transition: 0.25s ease;
+}
+
+.home-stat:hover {
+    background: rgba(212, 175, 55, 0.04);
+}
+
+.home-stat > i {
+    color: #d4af37;
+    font-size: 18px;
+}
+
+.home-stat strong {
+    display: block;
+    color: #bbb6ad;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.home-stat span {
+    display: block;
+    margin-top: 4px;
+    color: #505050;
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .route66-home {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .home-hero {
+        gap: 35px;
+    }
+
+    .home-hero h1 {
+        font-size: clamp(52px, 7vw, 80px);
+    }
+
+    .home-floating-card {
+        right: -5px;
+    }
+}
+
+
+/* =========================================================
+   900px — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .route66-home {
+        padding-top: 35px;
+    }
+
+    .home-hero {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        min-height: auto;
+    }
+
+    .home-hero-content {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .home-eyebrow {
+        margin-bottom: 20px;
+    }
+
+    .home-actions {
+        justify-content: center;
+    }
+
+    .home-visual {
+        min-height: 440px;
+    }
+
+    .home-chat-card {
+        width: min(430px, 90%);
+    }
+
+    .home-floating-card {
+        right: 5%;
+        bottom: 15px;
+    }
+
+    .home-stats {
+        margin-top: 35px;
+    }
+}
+
+
+/* =========================================================
+   650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .route66-home {
+        min-height: calc(100vh - 80px);
+        padding: 30px 18px 40px;
+    }
+
+    .home-hero {
+        gap: 30px;
+    }
+
+    .home-hero h1 {
+        font-size: clamp(47px, 14vw, 70px);
+        letter-spacing: -3px;
+    }
+
+    .home-hero-content > p {
+        margin-top: 22px;
+        font-size: 13px;
+    }
+
+    .home-actions {
+        margin-top: 27px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .home-primary-button,
+    .home-secondary-button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .home-visual {
+        min-height: 390px;
+    }
+
+    .home-chat-card {
+        width: 100%;
+        min-height: 365px;
+        padding: 15px;
+        border-radius: 18px;
+    }
+
+    .home-messages {
+        min-height: 235px;
+    }
+
+    .home-floating-card {
+        right: -2px;
+        bottom: 5px;
+        min-width: 140px;
+        padding: 10px;
+    }
+
+    .home-stats {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .home-stat {
+        min-height: 58px;
+    }
+}
+
+
+/* =========================================================
+   450px
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .route66-home {
+        padding: 25px 12px 35px;
+    }
+
+    .home-eyebrow {
+        font-size: 8px;
+        letter-spacing: 1.3px;
+    }
+
+    .home-hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .home-hero-content > p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .home-visual {
+        min-height: 355px;
+    }
+
+    .home-chat-card {
+        min-height: 335px;
+    }
+
+    .home-card-header {
+        height: 48px;
+    }
+
+    .home-user-avatar {
+        width: 34px;
+        height: 34px;
+    }
+
+    .home-messages {
+        min-height: 210px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .home-message {
+        font-size: 9px;
+        padding: 9px 11px;
+    }
+
+    .home-floating-card {
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+/* =========================================================
+   350px
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .route66-home {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .home-hero h1 {
+        font-size: 42px;
+    }
+
+    .home-eyebrow {
+        padding: 7px 10px;
+        font-size: 7px;
+    }
+
+    .home-chat-card {
+        padding: 12px;
+    }
+
+    .home-floating-card {
+        min-width: 125px;
+    }
+
+    .home-floating-card span {
+        font-size: 7px;
+    }
+}
