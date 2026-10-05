@@ -37,7 +37,7 @@ function People() {
   async function GetUsers() {
     const token = localStorage.getItem("token")
 
-    const response = await fetch(`http://localhost:3015/user/peoples?search=${search}`,{
+    const response = await fetch(`https://route66-backend-1-v5us.onrender.com/user/peoples?search=${search}`,{
         headers:{
             authorization:token
         }

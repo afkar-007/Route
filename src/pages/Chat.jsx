@@ -93,7 +93,7 @@ function Chat() {
     };
     socket.emit("sendMessage", dataMessages);
 
-    const response = await fetch("http://localhost:3015/chats/chat", {
+    const response = await fetch("https://route66-backend-1-v5us.onrender.com/chats/chat", {
       method: "POSt",
       headers: {
         "Content-Type": "application/json",
@@ -115,7 +115,7 @@ function Chat() {
       const receiverId = id;
 
       const response = await fetch(
-        `http://localhost:3015/chats/getChat?senderId=${senderId}&receiverId=${receiverId}`,
+        `https://route66-backend-1-v5us.onrender.com/chats/getChat?senderId=${senderId}&receiverId=${receiverId}`,
       );
 
       const data = await response.json();
@@ -144,7 +144,7 @@ function Chat() {
 
 
       const response = await fetch(
-        `http://localhost:3015/chats/deleteChat/${uid}`,
+        `https://route66-backend-1-v5us.onrender.com/chats/deleteChat/${uid}`,
         {
           method: "DELETE",
           headers: {
@@ -201,7 +201,7 @@ function Chat() {
   async function oneUser() {
     try {
       const response = await fetch(
-        `http://localhost:3015/user/getOneUser/${id}`,
+        `https://route66-backend-1-v5us.onrender.com/user/getOneUser/${id}`,
       );
 
       const data = await response.json();

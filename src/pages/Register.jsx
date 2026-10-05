@@ -65,7 +65,7 @@ function Register() {
         email: email,
         password: password,
       };
-      const response = await fetch("http://localhost:3015/user/register", {
+      const response = await fetch("https://route66-backend-1-v5us.onrender.com/user/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

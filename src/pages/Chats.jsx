@@ -40,7 +40,7 @@ function Chats() {
 
             // Call backend
             const response = await fetch(
-                `http://localhost:3015/chats/getChats?userId=${userId}`
+                `https://route66-backend-1-v5us.onrender.com/chats/getChats?userId=${userId}`
             );
 
 
