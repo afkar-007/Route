@@ -4,7 +4,7 @@ import "../styles/Chat.css";
 import { useParams } from "react-router-dom";
 import { io } from "socket.io-client"; 
 import { useNavigate } from "react-router-dom";
-import Navbar from '../components/Navbar'
+import Navbar from "../components/Nav"
 
 function Chat() {
   const { id } = useParams();
