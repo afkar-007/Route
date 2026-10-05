@@ -25,6 +25,7 @@
     color: #ffffff;
     font-family: "Inter", sans-serif;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .route66-people *,

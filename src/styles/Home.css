@@ -15,6 +15,7 @@
     color: #ffffff;
     font-family: "Inter", sans-serif;
     overflow: hidden;
+    width: 100%;
 }
 
 .route66-home *,
