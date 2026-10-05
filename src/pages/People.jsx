@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/People.css";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Nav";
 function People() {
   const navigate = useNavigate();
 

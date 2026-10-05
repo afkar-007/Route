@@ -26,7 +26,7 @@ const navItems = [
 ];
 
 
-function Navbar() {
+function Nav() {
     useEffect(()=>{
         NavOneUser()
         
@@ -443,4 +443,4 @@ function Navbar() {
 }
 
 
-export default Navbar;
+export default Nav;

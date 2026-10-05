@@ -1,6 +1,6 @@
 
 import React from "react";
-import Navbar from "../components/navbar";
+import Nav from "../components/Nav";
 import "../styles/About.css";
 import { useEffect } from "react";
 
@@ -21,7 +21,7 @@ function About() {
 
     return (
         <>
-            <Navbar />
+            <Nav/>
 
             <div className="route66-about-page">
 

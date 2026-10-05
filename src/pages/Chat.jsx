@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../styles/Chat.css";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Nav";
 import { useParams } from "react-router-dom";
 import { io } from "socket.io-client"; 
 import { useNavigate } from "react-router-dom";

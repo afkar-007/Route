@@ -1,7 +1,7 @@
 
 import React from "react";
 import "../styles/Home.css";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Nav";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
