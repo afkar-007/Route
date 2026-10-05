@@ -110,6 +110,10 @@ function Navbar() {
       }
     }
 
+    if(!user){
+        return( <p>loading</p> )
+        
+    }
 
 
 
