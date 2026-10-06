@@ -96,7 +96,7 @@ function Nav() {
 
 
         const response = await fetch(
-          `http://localhost:3015/user/getOneUser/${id}`,
+          `https://route66-backend-1-v5us.onrender.com/user/getOneUser/${id}`,
         );
 
         const data = await response.json();

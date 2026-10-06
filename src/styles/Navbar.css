@@ -1,415 +1,177 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap");
-
-
 /* =========================================================
-   BASE
+   ROUTE66 NAVBAR
 ========================================================= */
 
 .route66-navbar {
+    width: 100%;
+    height: 76px;
+    background: rgba(10, 10, 12, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     position: sticky;
     top: 0;
     z-index: 1000;
-
-    
-
-    padding: 14px 24px;
-
-    font-family: "Inter", sans-serif;
-
-    background: #080808;
-    width :100%
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
-
-.route66-navbar *,
-.route66-navbar *::before,
-.route66-navbar *::after {
-    box-sizing: border-box;
-}
-
 
 /* =========================================================
-   MAIN CONTAINER
+   CONTAINER
 ========================================================= */
 
 .navbar-container {
-    position: relative;
-
     width: 100%;
-    max-width: 1400px;
-
-    height: 70px;
-
-    margin: 0 auto;
-
-    padding: 0 16px;
+    max-width: 1450px;
+    height: 100%;
+    margin: auto;
+    padding: 0 30px;
 
     display: flex;
     align-items: center;
-
-    border: 1px solid rgba(212, 175, 55, 0.13);
-
-    border-radius: 18px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(25, 25, 25, 0.98),
-            rgba(11, 11, 11, 0.98)
-        );
-
-    box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.38),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    justify-content: space-between;
 }
-
 
 /* =========================================================
    LOGO
 ========================================================= */
 
 .navbar-logo {
-    flex-shrink: 0;
-
     display: flex;
     align-items: center;
-
-    gap: 10px;
-
-    color: #fff;
+    gap: 11px;
 
     text-decoration: none;
+    color: white;
+
+    min-width: 220px;
 }
 
 .navbar-logo-image {
     width: 43px;
     height: 43px;
 
-    flex-shrink: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border-radius: 11px;
-
-    border: 1px solid rgba(212, 175, 55, 0.2);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(212, 175, 55, 0.14),
-            rgba(212, 175, 55, 0.025)
-        );
 }
 
 .navbar-logo-image img {
-    width: 30px;
-    height: 30px;
-
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-
-    filter:
-        drop-shadow(
-            0 0 8px rgba(212, 175, 55, 0.25)
-        );
 }
 
 .navbar-logo-text {
-    min-width: 0;
-
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .navbar-logo-text h3 {
     margin: 0;
 
-    font-family: "Manrope", sans-serif;
-
-    font-size: 16px;
+    font-size: 22px;
     line-height: 1;
-
     font-weight: 800;
+    letter-spacing: 1.5px;
 
-    letter-spacing: 2px;
-
-    white-space: nowrap;
-
-    color: #eeeeea;
+    color: #ffffff;
 }
 
 .navbar-logo-text h3 span {
-    color: #d4af37;
+    color: #f5b942;
 }
 
 .navbar-logo-text p {
     margin: 5px 0 0;
 
     font-size: 7px;
-
-    line-height: 1;
-
     font-weight: 600;
+    letter-spacing: 2px;
 
-    letter-spacing: 1.4px;
-
-    white-space: nowrap;
-
-    color: #555;
+    color: rgba(255, 255, 255, 0.48);
 }
-
 
 /* =========================================================
    DESKTOP NAVIGATION
 ========================================================= */
 
 .navbar-navigation {
-    margin-left: clamp(30px, 5vw, 80px);
-
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 7px;
 
-    gap: 4px;
+    flex: 1;
 }
 
 .navbar-link {
     position: relative;
 
-    height: 42px;
-
-    padding: 0 15px;
-
     display: flex;
     align-items: center;
-    justify-content: center;
-
     gap: 8px;
 
-    border: 1px solid transparent;
+    padding: 10px 17px;
 
     border-radius: 10px;
 
-    color: #686868;
+    color: rgba(255, 255, 255, 0.58);
 
     text-decoration: none;
 
-    font-size: 11px;
-
+    font-size: 14px;
     font-weight: 600;
 
-    white-space: nowrap;
-
     transition:
-        color 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
 }
 
 .navbar-link i {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .navbar-link:hover {
-    color: #d0ccc4;
-
-    background: rgba(255, 255, 255, 0.035);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-1px);
 }
 
 .navbar-link-active {
-    color: #d4af37;
-
-    background:
-        rgba(212, 175, 55, 0.07);
-
-    border-color:
-        rgba(212, 175, 55, 0.1);
-}
-
-.navbar-link-active i {
-    color: #d4af37;
-
-    text-shadow:
-        0 0 12px rgba(212, 175, 55, 0.4);
+    color: #f5b942 !important;
+    background: rgba(245, 185, 66, 0.08);
 }
 
 .navbar-link-active::after {
     content: "";
 
     position: absolute;
-
-    left: 50%;
     bottom: -1px;
+    left: 50%;
 
-    width: 18px;
+    width: 22px;
     height: 2px;
 
     transform: translateX(-50%);
 
+    background: #f5b942;
     border-radius: 10px;
 
-    background: #d4af37;
-
-    box-shadow:
-        0 0 9px rgba(212, 175, 55, 0.7);
+    box-shadow: 0 0 10px rgba(245, 185, 66, 0.7);
 }
 
-
 /* =========================================================
-   RIGHT SECTION
+   RIGHT SIDE
 ========================================================= */
 
 .navbar-right {
-    margin-left: auto;
-
-    min-width: 0;
+    min-width: 220px;
 
     display: flex;
     align-items: center;
-   
-
-    
+    justify-content: flex-end;
 }
-
-
-/* =========================================================
-   NEW CHAT
-========================================================= */
-
-.navbar-new-button {
-    height: 40px;
-
-    padding: 0 14px;
-
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 7px;
-
-    border: none;
-
-    border-radius: 10px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #e0c46b,
-            #b68c37
-        );
-
-    color: #0b0b0b;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 7px 20px rgba(212, 175, 55, 0.12);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.navbar-new-button:hover {
-    transform: translateY(-1px);
-
-    box-shadow:
-        0 10px 25px rgba(212, 175, 55, 0.2);
-}
-
-.navbar-new-button i {
-    font-size: 13px;
-}
-
-
-/* =========================================================
-   NOTIFICATION
-========================================================= */
-
-.navbar-icon-button {
-    position: relative;
-
-    width: 40px;
-    height: 40px;
-
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid transparent;
-
-    border-radius: 10px;
-
-    background: transparent;
-
-    color: #6b6b6b;
-
-    cursor: pointer;
-
-    transition:
-        color 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.navbar-icon-button:hover {
-    color: #d4af37;
-
-    background:
-        rgba(212, 175, 55, 0.05);
-
-    border-color:
-        rgba(212, 175, 55, 0.1);
-}
-
-.navbar-icon-button i {
-    font-size: 16px;
-}
-
-.navbar-notification {
-    position: absolute;
-
-    top: 7px;
-    right: 7px;
-
-    width: 6px;
-    height: 6px;
-
-    border-radius: 50%;
-
-    background: #d4af37;
-
-    border: 1px solid #111;
-
-    box-shadow:
-        0 0 8px rgba(212, 175, 55, 0.8);
-}
-
-
-/* =========================================================
-   DIVIDER
-========================================================= */
-
-.route66-action-divider {
-    width: 1px;
-    height: 27px;
-
-    flex-shrink: 0;
-
-    margin: 0 3px;
-
-    background: rgba(255, 255, 255, 0.07);
-}
-
 
 /* =========================================================
    PROFILE
@@ -417,150 +179,114 @@
 
 .navbar-profile-wrapper {
     position: relative;
-
-    flex-shrink: 0;
 }
 
 .navbar-profile-button {
-    height: 44px;
-
-    max-width: 145px;
-
-    padding: 3px 8px 3px 4px;
-
     display: flex;
     align-items: center;
+    gap: 10px;
 
-    gap: 8px;
+    padding: 6px 9px 6px 6px;
 
     border: 1px solid transparent;
-
-    border-radius: 11px;
+    border-radius: 12px;
 
     background: transparent;
-
-    color: #777;
+    color: white;
 
     cursor: pointer;
 
     transition:
-        background 0.2s ease,
-        border-color 0.2s ease;
+        background 0.25s ease,
+        border 0.25s ease;
 }
 
 .navbar-profile-button:hover {
-    background: rgba(255, 255, 255, 0.035);
-
-    border-color:
-        rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.08);
 }
 
 .navbar-avatar {
-    position: relative;
-
-    width: 35px;
-    height: 35px;
-
-    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 10px;
+    border-radius: 50%;
 
-    background:
-        linear-gradient(
-            145deg,
-            #e6e0d4,
-            #aaa398
-        );
+    background: linear-gradient(
+        135deg,
+        #f5b942,
+        #d88b16
+    );
 
-    color: #111;
+    box-shadow:
+        0 0 0 2px rgba(245, 185, 66, 0.15),
+        0 4px 15px rgba(245, 185, 66, 0.18);
 
-    font-size: 10px;
-
-    font-weight: 800;
+    overflow: hidden;
 }
 
 .navbar-online {
-    position: absolute;
+    color: #111;
 
-    right: -2px;
-    bottom: -2px;
-
-    width: 9px;
-    height: 9px;
-
-    border-radius: 50%;
-
-    background: #d4af37;
-
-    border: 2px solid #151515;
-
-    box-shadow:
-        0 0 7px rgba(212, 175, 55, 0.6);
+    font-size: 16px;
+    font-weight: 800;
 }
 
 .navbar-profile-name {
+    max-width: 110px;
+
     overflow: hidden;
-
-    max-width: 65px;
-
-    color: #c5c1ba;
-
-    font-size: 10px;
-
-    font-weight: 600;
-
     white-space: nowrap;
-
     text-overflow: ellipsis;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .navbar-profile-button > i {
-    color: #555;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
 
-    font-size: 9px;
+    transition: transform 0.25s ease;
 }
 
-
 /* =========================================================
-   PROFILE DROPDOWN
+   PROFILE MENU
 ========================================================= */
 
 .navbar-profile-menu {
     position: absolute;
 
-    top: calc(100% + 10px);
+    top: calc(100% + 12px);
     right: 0;
 
-    z-index: 1100;
+    width: 255px;
 
-    width: 225px;
+    padding: 10px;
 
-    padding: 9px;
+    background: rgba(18, 18, 21, 0.98);
 
-    border: 1px solid rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.09);
 
     border-radius: 15px;
 
-    background:
-        linear-gradient(
-            145deg,
-            #1d1d1d,
-            #0d0d0d
-        );
-
     box-shadow:
-        0 20px 55px rgba(0, 0, 0, 0.65);
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(245, 185, 66, 0.04);
 
-    animation:
-        navbarMenuOpen 0.2s ease;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    animation: profileMenu 0.2s ease;
 }
 
-@keyframes navbarMenuOpen {
-
+@keyframes profileMenu {
     from {
         opacity: 0;
         transform: translateY(-6px);
@@ -570,42 +296,36 @@
         opacity: 1;
         transform: translateY(0);
     }
-
 }
+
+/* =========================================================
+   PROFILE HEADER
+========================================================= */
 
 .navbar-profile-header {
     display: flex;
     align-items: center;
+    gap: 11px;
 
-    gap: 10px;
-
-    padding: 7px;
+    padding: 10px 8px 13px;
 }
 
 .navbar-menu-avatar {
     width: 40px;
     height: 40px;
 
-    flex-shrink: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 10px;
+    border-radius: 50%;
 
-    background:
-        linear-gradient(
-            145deg,
-            #e6e0d4,
-            #aaa398
-        );
+    background: rgba(245, 185, 66, 0.1);
+    color: #f5b942;
+}
 
-    color: #111;
-
-    font-size: 11px;
-
-    font-weight: 800;
+.navbar-menu-avatar i {
+    font-size: 22px;
 }
 
 .navbar-profile-header > div:last-child {
@@ -613,123 +333,141 @@
 
     display: flex;
     flex-direction: column;
+    gap: 4px;
 }
 
 .navbar-profile-header strong {
-    color: #e8e4dc;
+    color: #ffffff;
 
-    font-size: 11px;
+    font-size: 13px;
+    font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .navbar-profile-header span {
-    margin-top: 3px;
+    max-width: 170px;
 
-    color: #555;
+    color: rgba(255, 255, 255, 0.45);
 
-    font-size: 9px;
+    font-size: 11px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
+
+/* =========================================================
+   MENU LINE
+========================================================= */
 
 .navbar-menu-line {
-    width: 100%;
     height: 1px;
+    margin: 5px 4px;
 
-    margin: 7px 0;
-
-    background:
-        rgba(255, 255, 255, 0.055);
+    background: rgba(255, 255, 255, 0.07);
 }
 
-.navbar-profile-menu > button {
+/* =========================================================
+   PROFILE MENU BUTTONS
+========================================================= */
+
+.navbar-profile-menu button {
     width: 100%;
-    height: 38px;
 
     display: flex;
     align-items: center;
+    gap: 11px;
 
-    gap: 10px;
-
-    padding: 0 9px;
+    padding: 11px 10px;
 
     border: none;
-
     border-radius: 9px;
 
     background: transparent;
 
-    color: #777;
+    color: rgba(255, 255, 255, 0.72);
 
-    font-family: "Inter", sans-serif;
-
-    font-size: 10px;
-
-    text-align: left;
+    font-size: 13px;
+    font-weight: 500;
 
     cursor: pointer;
 
+    text-align: left;
+
     transition:
-        color 0.2s ease,
-        background 0.2s ease;
+        background 0.2s ease,
+        color 0.2s ease;
 }
 
-.navbar-profile-menu > button:hover {
-    color: #d4af37;
-
-    background:
-        rgba(212, 175, 55, 0.05);
+.navbar-profile-menu button:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
 }
 
-.navbar-profile-menu > button i {
-    width: 17px;
+.navbar-profile-menu button i {
+    width: 18px;
 
-    font-size: 13px;
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 15px;
 }
 
-.navbar-profile-menu > button span {
-    flex: 1;
+.navbar-profile-menu button:hover i {
+    color: #f5b942;
 }
+
+/* =========================================================
+   LOGOUT
+========================================================= */
 
 .navbar-profile-menu .navbar-logout {
-    color: #9c5c5c;
+    color: #ff6b6b;
+}
+
+.navbar-profile-menu .navbar-logout i {
+    color: #ff6b6b;
 }
 
 .navbar-profile-menu .navbar-logout:hover {
-    color: #db7a7a;
-
-    background:
-        rgba(200, 70, 70, 0.06);
+    background: rgba(255, 70, 70, 0.08);
+    color: #ff7777;
 }
 
-
 /* =========================================================
-   MOBILE BUTTON
+   MOBILE MENU BUTTON
 ========================================================= */
 
 .navbar-mobile-button {
     display: none;
 
-    width: 40px;
-    height: 40px;
-
-    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
 
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(255, 255, 255, 0.06);
-
+    border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: 10px;
 
-    background: transparent;
+    background: rgba(255, 255, 255, 0.04);
 
-    color: #aaa;
+    color: #ffffff;
+
+    font-size: 21px;
 
     cursor: pointer;
+
+    transition: all 0.25s ease;
 }
 
-.navbar-mobile-button i {
-    font-size: 17px;
+.navbar-mobile-button:hover {
+    color: #f5b942;
+    border-color: rgba(245, 185, 66, 0.3);
+    background: rgba(245, 185, 66, 0.06);
 }
-
 
 /* =========================================================
    MOBILE MENU
@@ -737,427 +475,252 @@
 
 .navbar-mobile-menu {
     display: none;
+
+    position: absolute;
+
+    top: 76px;
+    left: 0;
+    right: 0;
+
+    padding: 12px 18px 18px;
+
+    background: rgba(12, 12, 14, 0.98);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    animation: mobileMenu 0.25s ease;
 }
 
+@keyframes mobileMenu {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* =========================================================
-   LARGE TABLET
-   1200px → 1001px
+   MOBILE NAV LINKS
 ========================================================= */
 
-@media (max-width: 1200px) {
+.navbar-mobile-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
 
-    .route66-navbar {
-        padding-left: 18px;
-        padding-right: 18px;
-        width: 100%;
-    }
+    width: 100%;
 
-    .navbar-navigation {
-        margin-left: 30px;
-    }
+    padding: 13px 14px;
 
-    .navbar-link {
-        padding-left: 11px;
-        padding-right: 11px;
-    }
+    margin-bottom: 5px;
 
-    .navbar-link span {
-        font-size: 10px;
-    }
+    border-radius: 10px;
 
-    .navbar-new-button {
-        padding-left: 11px;
-        padding-right: 11px;
-    }
+    text-decoration: none;
 
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
 }
 
+.navbar-mobile-link i {
+    width: 20px;
+
+    font-size: 17px;
+}
+
+.navbar-mobile-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-mobile-link-active {
+    color: #f5b942 !important;
+    background: rgba(245, 185, 66, 0.08);
+}
+
+/* =========================================================
+   MOBILE NEW CHAT
+========================================================= */
+
+.navbar-mobile-chat {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 10px;
+    padding: 12px;
+
+    border: 1px solid rgba(245, 185, 66, 0.35);
+    border-radius: 10px;
+
+    background: rgba(245, 185, 66, 0.08);
+
+    color: #f5b942;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.navbar-mobile-chat:hover {
+    background: rgba(245, 185, 66, 0.14);
+}
 
 /* =========================================================
    TABLET
-   1000px → 801px
 ========================================================= */
 
-@media (max-width: 1000px) {
-
-    .route66-navbar {
-        padding: 15px 15px;
-        width: 100%;
-    }
+@media (max-width: 950px) {
 
     .navbar-container {
-        height: 64px;
-
-       
-    }
-
-    .navbar-logo-image {
-        width: 40px;
-        height: 40px;
-    }
-
-    .navbar-logo-image img {
-        width: 28px;
-        height: 28px;
-    }
-
-    .navbar-logo-text h3 {
-        font-size: 14px;
-    }
-
-    .navbar-logo-text p {
-        font-size: 6px;
-    }
-
-    .navbar-navigation {
-        margin-left: 18px;
-    }
-
-    .navbar-link {
-        padding-left: 9px;
-        padding-right: 9px;
-
-        gap: 6px;
-    }
-
-    .navbar-link i {
-        font-size: 13px;
-    }
-
-    .navbar-link span {
-        font-size: 9px;
-    }
-
-    .navbar-new-button {
-        width: 39px;
-        height: 39px;
-
-        padding: 0;
-    }
-
-    .navbar-new-button span {
-        display: none;
-    }
-
-    .navbar-icon-button {
-        width: 39px;
-        height: 39px;
-    }
-
-    .navbar-profile-name {
-        display: none;
-    }
-
-    .navbar-profile-button {
-        padding-right: 4px;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   800px and below
-========================================================= */
-
-@media (max-width: 800px) {
-
-    .route66-navbar {
-        position: sticky;
-
-        padding: 8px 10px;
-    }
-
-    .navbar-container {
-        height: 60px;
-
-        padding: 0 8px;
-
-        border-radius: 15px;
-    }
-
-    /* Hide desktop navigation */
-
-   
-
-    /* New chat becomes hidden */
-
-    .navbar-new-button {
-        display: none;
-    }
-
-    /* Mobile menu icon */
-
-    .navbar-mobile-button {
-        display: flex;
-    }
-
-    /* Right side */
-
-    .navbar-right {
-        gap: 3px;
-    }
-
-    /* Profile name hidden */
-
-    .navbar-profile-name {
-        display: none;
-    }
-
-    .navbar-profile-button > i {
-        display: none;
-    }
-
-    /* Profile */
-
-    .navbar-profile-button {
-        width: 39px;
-        height: 39px;
-
-        padding: 2px;
-
-        justify-content: center;
-    }
-
-    .navbar-avatar {
-        width: 34px;
-        height: 34px;
-    }
-
-    /* Divider */
-
-    .route66-action-divider {
-        display: none;
-    }
-
-    /* Mobile menu */
-
-    .navbar-mobile-menu {
-        position: absolute;
-
-        top: calc(100% + 8px);
-
-        left: 10px;
-        right: 10px;
-
-        z-index: 1050;
-
-        display: flex;
-        flex-direction: column;
-
-        padding: 9px;
-
-        border: 1px solid rgba(212, 175, 55, 0.12);
-
-        border-radius: 15px;
-
-        background:
-            linear-gradient(
-                145deg,
-                #1d1d1d,
-                #0c0c0c
-            );
-
-        box-shadow:
-            0 20px 50px rgba(0, 0, 0, 0.6);
-
-        animation:
-            navbarMenuOpen 0.2s ease;
-    }
-
-    .navbar-mobile-link {
-        width: 100%;
-        height: 44px;
-
-        display: flex;
-        align-items: center;
-
-        gap: 12px;
-
-        padding: 0 12px;
-
-        border-radius: 9px;
-
-        color: #777;
-
-        text-decoration: none;
-
-        font-size: 11px;
-
-        font-weight: 600;
-    }
-
-    .navbar-mobile-link i {
-        width: 20px;
-
-        font-size: 15px;
-    }
-
-    .navbar-mobile-link-active {
-        color: #d4af37;
-
-        background:
-            rgba(212, 175, 55, 0.06);
-    }
-
-    .navbar-mobile-chat {
-        width: 100%;
-        height: 43px;
-
-        margin-top: 7px;
-
-        border: none;
-
-        border-radius: 9px;
-
-        background:
-            linear-gradient(
-                135deg,
-                #e0c46b,
-                #b68c37
-            );
-
-        color: #111;
-
-        font-size: 10px;
-
-        font-weight: 800;
-
-        cursor: pointer;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   600px and below
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .route66-navbar {
-        padding: 7px 8px;
-    }
-
-    .navbar-container {
-        height: 57px;
-
-        padding: 0 7px;
-
-        border-radius: 14px;
+        padding: 0 20px;
     }
 
     .navbar-logo {
-        gap: 8px;
+        min-width: auto;
     }
 
-    .navbar-logo-image {
-        width: 37px;
-        height: 37px;
-
-        border-radius: 9px;
+    .navbar-navigation {
+        gap: 2px;
     }
 
-    .navbar-logo-image img {
-        width: 26px;
-        height: 26px;
-    }
-
-    .navbar-logo-text h3 {
+    .navbar-link {
+        padding: 9px 11px;
         font-size: 13px;
-
-        letter-spacing: 1.6px;
     }
 
-    .navbar-logo-text p {
+    .navbar-link i {
+        font-size: 15px;
+    }
+
+    .navbar-right {
+        min-width: auto;
+    }
+
+    .navbar-profile-name {
         display: none;
     }
-
-    .navbar-icon-button {
-        width: 37px;
-        height: 37px;
-    }
-
-    .navbar-profile-button {
-        width: 37px;
-        height: 37px;
-    }
-
-    .navbar-avatar {
-        width: 33px;
-        height: 33px;
-
-        border-radius: 9px;
-    }
-
-    .navbar-mobile-button {
-        width: 37px;
-        height: 37px;
-        
-    }
-
 }
 
-
 /* =========================================================
-   VERY SMALL MOBILE
-   420px and below
+   MOBILE
 ========================================================= */
 
-@media (max-width: 420px) {
+@media (max-width: 700px) {
 
     .route66-navbar {
-        padding-left: 6px;
-        padding-right: 6px;
+        height: 68px;
     }
 
     .navbar-container {
-        padding-left: 6px;
-        padding-right: 6px;
+        padding: 0 15px;
     }
 
-    .navbar-logo-text {
-        display: none;
-    }
+    /* Logo */
 
     .navbar-logo-image {
         width: 38px;
         height: 38px;
     }
 
-    .navbar-right {
-        gap: 1px;
+    .navbar-logo-text h3 {
+        font-size: 19px;
     }
 
-    .navbar-icon-button {
-        width: 36px;
-        height: 36px;
+    .navbar-logo-text p {
+        font-size: 6px;
+        letter-spacing: 1.5px;
     }
+
+    /* Hide desktop navigation */
+
+    .navbar-navigation {
+        display: none;
+    }
+
+    /* Right side */
+
+    .navbar-right {
+        gap: 8px;
+    }
+
+    /* Profile */
 
     .navbar-profile-button {
+        padding: 4px;
+    }
+
+    .navbar-avatar {
         width: 36px;
         height: 36px;
     }
+
+    .navbar-profile-name,
+    .navbar-profile-button > i {
+        display: none;
+    }
+
+    /* Mobile button */
 
     .navbar-mobile-button {
-        width: 36px;
-        height: 36px;
+        display: flex;
+
+        width: 39px;
+        height: 39px;
+
+        font-size: 19px;
     }
 
+    /* Mobile menu */
+
+    .navbar-mobile-menu {
+        display: block;
+        top: 68px;
+    }
+
+    /* Profile menu */
+
+    .navbar-profile-menu {
+        position: fixed;
+
+        top: 62px;
+        right: 12px;
+
+        width: min(255px, calc(100vw - 24px));
+    }
 }
 
-
 /* =========================================================
-   EXTRA SMALL
-   340px and below
+   SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 340px) {
+@media (max-width: 400px) {
 
     .navbar-container {
-        height: 54px;
+        padding: 0 11px;
+    }
+
+    .navbar-logo {
+        gap: 7px;
     }
 
     .navbar-logo-image {
@@ -1165,21 +728,29 @@
         height: 35px;
     }
 
-    .navbar-logo-image img {
-        width: 24px;
-        height: 24px;
+    .navbar-logo-text h3 {
+        font-size: 17px;
     }
 
-    .navbar-icon-button,
-    .navbar-profile-button,
+    .navbar-logo-text p {
+        font-size: 5px;
+        letter-spacing: 1px;
+    }
+
     .navbar-mobile-button {
-        width: 34px;
-        height: 34px;
+        width: 37px;
+        height: 37px;
     }
 
     .navbar-avatar {
-        width: 30px;
-        height: 30px;
+        width: 34px;
+        height: 34px;
     }
+}
 
+.navbar {
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
 }

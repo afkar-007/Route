@@ -95,6 +95,17 @@ function Home() {
                     </div>
                 </div>
 
+
+
+                <div  onClick={()=>navigate("/profile")} className="home-stat" >
+                     <i className="bi bi-person"></i>
+
+                    <div>
+                        <strong>profile</strong>
+                        <span>see your profile</span>
+                    </div>
+                </div>
+
                 <div  onClick={()=>navigate("/About")} className="home-stat" >
                      <i className="bi bi-book-half"></i>
 
