@@ -1098,7 +1098,11 @@ body{
 
     color: #b28f25;
 }
-
+.login-password-toggle{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
 
 /* =========================================================
    ANIMATIONS
